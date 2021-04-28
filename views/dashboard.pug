@@ -1,0 +1,61 @@
+doctype html
+html
+    head
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Exam Record Query and Management System
+        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous")
+        link(rel="stylesheet", href="/stylesheets/common.css")
+        link(rel="stylesheet", href="/stylesheets/dashboard.css")
+        script(src='/javascripts/dashboard.js')
+    body
+
+        nav(class="navbar navbar-expand-lg navbar-light bg-light")
+            div(class="container-fluid")
+                a(class="navbar-brand" href="#") ERQM System
+                button(class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation")
+                    span(class="navbar-toggler-icon")
+                div(class="collapse navbar-collapse" id="navbarNavAltMarkup")
+                    div(class="navbar-nav")
+                        a(class="nav-link active" aria-current="page" href="#") Grade
+                        a(class="nav-link" href="#") Report
+        // isAdmin? : ;
+        // isTeacher
+
+        div.container
+            div.row.outer-space-top
+
+                div.col-lg-4
+                    div.outer-space-bottom
+                        input#input-address.form-control(type="text" placeholder="Module Name")
+                        button.btn.btn-primary Search
+                        button.btn.btn-secondary Clear
+                    div.outer-space-bottom Module List
+                        div(onclick="alert(this.innerText); this.style.backgroundColor = 'red'").text Web Development 1 - Semester 1 (2020-2021)
+                        div(onclick="alert(this.innerText);").text Databases - Semester 2 (2019-2020)
+                        div(onclick="alert(this.innerText);").text Rich Internet Application 2 - Semester 2 (2020-2021)
+                        div(onclick="alert(this.innerText);").text Module 4 - Semester 2 (2020-2021)
+                div.col-lg-2
+                    div.sub-title Module Name
+                    div.text Info
+                div.col-lg-6
+                    div.sub-title Grades
+                    table
+                        tr
+                            th Student ID / Name
+                            th Grade
+                        tr
+                            td 1 / Name
+                            td
+                                input(value="60" placeholder="60")
+                        tr
+                            td 2 / Name
+                            td
+                                input(value="60" placeholder="60")
+                        tr
+                            td 3 / Name
+                            td
+                                input(value="60" placeholder="60")
+                    div
+                        button.btn.btn-primary Update
+

@@ -1,0 +1,51 @@
+.title {
+    font-size: 36px;
+}
+
+.sub-title {
+    font-size: 24px;
+}
+
+.text {
+
+}
+
+.outer-space-top {
+    margin-top: 16px;
+}
+
+.outer-space-top-half {
+    margin-top: 8px;
+}
+
+.outer-space-bottom {
+    margin-bottom: 16px;
+}
+
+.outer-space-bottom-half {
+    margin-bottom: 8px;
+}
+
+.outer-space-right {
+    margin-right: 8px;
+}
+
+.inner-space-around {
+    padding: 16px;
+}
+
+.inner-space-around-half {
+    padding: 8px;
+
+}
+
+#btn-content-spinner {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .outer-space-top {
+        margin-top: 56px;
+    }
+
+}

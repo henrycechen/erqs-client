@@ -1,0 +1,83 @@
+doctype html
+html
+    head
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Exam Record Query and Management System
+        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous")
+        link(rel="stylesheet", href="/stylesheets/common.css")
+        link(rel="stylesheet", href="/stylesheets/dashboard.css")
+        script(src='/javascripts/common.js')
+        script(src='/javascripts/dashboard-admin.js')
+    body
+        nav(class="navbar navbar-expand-lg navbar-light bg-light")
+            div(class="container-fluid")
+                a(class="navbar-brand" href="") ERQM System
+                button(class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation")
+                    span(class="navbar-toggler-icon")
+                div(class="collapse navbar-collapse" id="navbarNavAltMarkup")
+                    div(class="navbar-nav")
+                        a#link-admin(class="nav-link active" aria-current="page" href="") Admin
+                button#btn-logout.btn.btn-secondary Logout
+        div.container
+            div.row.outer-space-top
+
+                div.col-lg-2.card-background-color.inner-space-around
+                    div.sub-title.outer-space-bottom-half Administrator
+                    div.text ID: #{uid}
+                    div.text Username: #{username}
+                    div.text Name: #{fullName}
+                    div.text Gender: #{gender}
+                    div.text Email: #{email}
+
+                div.col-lg-3.card-background-color.inner-space-around
+                    div.sub-title.outer-space-bottom-half Module List
+                    div.outer-space-bottom
+                        input#input-module-name.form-control(type="text" placeholder="Module Name").outer-space-bottom-half
+                        button#btn-search.btn.btn-primary.outer-space-right Search
+                        button#btn-clear.btn.btn-secondary Clear
+                    div
+                        ul#module-list.outer-space-bottom.list-group
+
+                div.col-lg-2.card-background-color.inner-space-around
+                    div.outer-space-bottom-half
+                        div.sub-title Module Info
+                        div#module-id.text Module ID:
+                        div#module-name.text Module Name:
+                        div#module-full-grade.text Full Grade:
+
+
+                div.col-lg-5.card-background-color.inner-space-around
+                    div.sub-title.outer-space-bottom-half Assign
+
+                    div.outer-space-bottom-half
+                        span Choose year
+                        select(class="form-select" aria-label="Default select example")
+                            option(selected) Year
+                            option(value="2019") 2019
+                            option(value="2020") 2020
+                            option(value="2021") 2021
+                    div.outer-space-bottom-half
+                        span Choose semester
+                        select(class="form-select" aria-label="Default select example")
+                            option(selected) Semester
+                            option(value="1") Semester 1
+                            option(value="2") Semester 2
+                    div.outer-space-bottom-half
+                        span Choose lecturer
+                        select(class="form-select" aria-label="Default select example")
+                            option(selected) Lecturer
+                            option(value="2") Katy Parrot
+                            option(value="32") Massa O'Flynns
+                            option(value="33") Aaron Anderson
+                    div.outer-space-bottom-half
+                        span Select students from this list
+                        ul.list-group
+                            ui#sid-3.list-group-item.student-list(onclick="studentClick(this)") Almond Piggy
+                            ui#sid-28.list-group-item.student-list(onclick="studentClick(this)") Sergio Phillips
+                            ui#sid-29.list-group-item.student-list(onclick="studentClick(this)") Amanda Martin
+                            ui#sid-30.list-group-item.student-list(onclick="studentClick(this)") Halkin Valentine
+                            ui#sid-31.list-group-item.student-list(onclick="studentClick(this)") Babousa Pokikén
+
+
+                    button#btn-update.btn.btn-secondary.outer-space-top-half Update
